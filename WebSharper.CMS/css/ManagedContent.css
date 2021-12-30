@@ -1,0 +1,44 @@
+.editor-container {
+    position: relative;
+}
+.editor {
+    width: 100vw;
+    height: 100%;
+}
+.editor textarea {
+    width: calc(100% - 16px);
+    min-height: 5rem;
+}
+
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    overflow: hidden;
+    display: none;
+}
+
+    .loader-container.show {
+        display: block;
+    }
+
+.loader {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background: blue;
+    left: -100%;
+    animation: infiniteLoad 0.25s linear infinite;
+}
+
+@keyframes infiniteLoad {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
